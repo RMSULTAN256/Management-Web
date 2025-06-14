@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+
+.body {
+    background-color: rgb(17, 17, 17);
+    margin: 0;
+    height: 100%;
+}
+
+.container-div {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 250px;
+    width: 400px;
+    height: 300px;
+    align-items: center;
+
+    background-image: linear-gradient(rgb(29, 29, 29), rgb(41, 41, 41));
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-bottom: 30px;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.container-div::after, container-div::before {
+    content: '';
+    position: absolute;
+    height: 300px;
+    width: 370px;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #ff0095, #ff4545);
+    border-radius: 10px;
+    z-index: -1;
+    margin-top: 30px;
+    padding: 20px;
+    animation: 2s spin linear infinite;
+}
+
+.container-div::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+  from {
+    --angle:0deg
+  }
+  to {
+    --angle: 360deg
+  }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.header .text {
+    font-family: 'Open Sans' sans-serif;
+    color: rgb(120, 204, 238);
+    font-size: 25px;
+}
+
+.inputs-sign {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    
+}
+
+.form-label {
+    color:white;
+    
+
+}
+
+.mb-3 .bi {
+    border: 2px solid rgb(82, 82, 82);
+    background-color: #c4c4c4;
+    padding: 2px;
+    
+}
+
+.container-button {
+    display: flex;
+    position: relative;
+    gap: 15px;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-button .button {
+    border-radius: 5px;
+    background-color: hsla(229, 80%, 70%, 0.89);
+    cursor: pointer;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+.form-label {
+    font-family: 'Open Sans', sans-serif;
+}
